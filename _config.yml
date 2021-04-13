@@ -16,7 +16,7 @@ social:
     
 
 disqus:
-  shortname: janczizikow # to enable comments replace with your_disqus_shortname
+  shortname: blog33 # to enable comments replace with your_disqus_shortname
 
 # Build settings
 markdown: kramdown
