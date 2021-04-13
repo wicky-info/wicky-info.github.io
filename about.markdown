@@ -3,4 +3,4 @@ layout: page
 title: About
 permalink: /about/
 ---
-<img src="wicky.jpg" alt="Wicky" width=150" height="70">
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
