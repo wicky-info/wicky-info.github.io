@@ -1,27 +1,56 @@
-<!DOCTYPE html>
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body>
+	{% include header.html %}
+	<div class="container">
 
-  {% include head.html %}
+	{% if page.id %}
+	<p>
+		<strong>{{ page.published | date: '%B %d, %Y' }}</strong> ( last updated : {{ page.date | date: '%B %d, %Y' }} )
+		<br>
+		{% for tag in page.tags %}
+			<a class="label label-default" href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
+		{% endfor %}
+    </p>
+	{%if page.github %}
+	<p>
+    	<a href="{{ page.github }}" class="btn btn-default">
+		    <i class="fa fa-github fa-2x"></i>  {{ page.github }}
+			</a>
+	</p>
+	{% endif %}
+	<hr>
+	<h1>Abstract</h1>
+	{% endif %}
 
-  <body id="page-top">
+	{{ content }}
 
-      {{ content }}
 
-	  {% include footer.html %}
+	{% if page.id %}
+	<p>Originally published {{ page.published | date: '%B %d, %Y' }}
+    <br> Latest update {{ page.date | date: '%B %d, %Y' }}</p>
 
-	  <!-- Bootstrap core JavaScript -->
-	  <script src="assets/js/jquery.min.js"></script>
-	  <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <p><strong>Related posts :</strong></p>
+        <ul>
+	    {% for allpost in site.posts %}
+			  {% for tag in page.tags %}
+			  {% if allpost.tags contains tag and allpost.id != page.id %}
+			  <li>
+			      <a href="{{ allpost.url }}">
+			        {{ allpost.title }}
+			      </a>
+			  </li>
+			  {% break %}
+			  {% endif %}
+			  {% endfor %}
+		{% endfor %}
+		</ul>
+	{% endif %}
 
-	  <!-- Plugin JavaScript -->
-	  <script src="assets/js/jquery.easing.min.js"></script>
-
-	  <!-- Contact form JavaScript -->
-	  <script src="assets/js/jqBootstrapValidation.js"></script>
-	  <script src="assets/js/contact_me.js"></script>
-
-	  <!-- Custom scripts for this template -->
-	  <script src="assets/js/agency.min.js"></script>
-
-  </body>
+	{% include disqus.html %}
+	</div>
+	{% include footer.html %}
+	{% include analytics.html %}
+</body>
 </html>
