@@ -11,12 +11,9 @@ instagram_username: wicky.andrian.pallo # replace with your_instagram_username o
 social:
   name: Wicky
   links:
-    - https://twitter.com/BenBalter
-    - https://www.facebook.com/ben.balter
-    - https://www.linkedin.com/in/BenBalter
-    - https://plus.google.com/+BenBalter
-    - https://github.com/benbalter
-    - https://keybase.io/benbalter
+    - https://twitter.com/WickyAndrean
+    - https://github.com/wicky-info+
+    
 
 disqus:
   shortname: janczizikow # to enable comments replace with your_disqus_shortname
