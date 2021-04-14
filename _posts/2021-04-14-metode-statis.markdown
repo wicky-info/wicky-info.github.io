@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2021-04-13 13:30:48 +0900
+title:  "Metode Statis"
+date:   2021-04-14 11:30:48 +0900
 categories: ruby
 ---
 <p>Contoh metode statis.</p>
