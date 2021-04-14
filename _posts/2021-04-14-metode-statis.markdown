@@ -6,7 +6,6 @@ categories: ruby
 ---
 <p>Contoh metode statis.</p>
 <script id="asciicast-320666" src="https://asciinema.org/a/320666.js" async></script>
-
-
+<br>
 <p>Source code</p>
 <script src="https://gist.github.com/wicky-info/c95e0ea49da26d188320db3267de5633.js"></script>
